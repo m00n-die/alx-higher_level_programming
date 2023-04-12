@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""
-    Contains a function that writes a string
-    and returns a number characters written 
-"""
+"""This module defines a file-writing function."""
 
 
-def append_write(filename="", text=""):
-    """writes a string to a file"""
+def write_file(filename="", text=""):
+    """Writes a string to a text file
+    """
     with open(filename, "w", encoding="utf-8") as f:
         return f.write(text)
