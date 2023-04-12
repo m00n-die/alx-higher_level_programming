@@ -5,5 +5,6 @@
 """
 
 def append_write(filename="", text=""):
-    with open("{}".format(filename), "w", encoding="utf-8") as f:
-        f.write(text)
+    """writes a string to a file"""
+    with open(filename, "w", encoding="utf-8") as f:
+        return f.write(text)
