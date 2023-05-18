@@ -1,6 +1,7 @@
 -- lists all cities contained in the database
-SELECT cities.`id`, cities.`name`, state.`name`
-  FROM `cities`
-      INNER JOIN `states`
-      ON cities.`statee_id` = state.`id`
-  ORDER BY cities.`id`;
+SELECT c.`id`, c.`name`, s.`name`
+  FROM `cities` AS c
+       INNER JOIN `states` AS s
+       ON c.`state_id` = s.`id`
+ ORDER BY c.`id`;
+ 
