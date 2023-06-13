@@ -5,11 +5,10 @@ const argToNum = Math.floor(Number(firstArg));
 
 if (Number.isNaN(argToNum)) {
   console.log('Missing size');
-}
-
-for (let i = 0; i < argToNum; i++) {
-  for (let j = 0; j < argToNum; j++) {
-  console.log('X');
-  console.log(' ');
-}
+} else {
+  for (let i = 0; i < argToNum; i++) {
+    let row = '';
+    for (let j = 0; j < argToNum; j++) row += 'X';
+    console.log(row);
+  }
 }
