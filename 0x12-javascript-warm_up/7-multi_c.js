@@ -6,9 +6,9 @@ let i = 0;
 
 if (Number.isNaN(argToNum)) {
   console.log('Missing number of occurrences');
-}
-
-while (i < argToNum) {
-  console.log('C is fun');
-  i++;
+} else {
+  while (i < argToNum) {
+    console.log('C is fun');
+    i++;
+  }
 }
