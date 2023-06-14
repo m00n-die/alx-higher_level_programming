@@ -2,9 +2,11 @@
 
 const firstArg = process.argv[2];
 const secondArg = process.argv[3];
+const firstInt = Math.floor(Number(firstArg));
+const secondInt = Math.floor(Number(secondArg));
 
-function add (a, b) {
-  a = Math.floor(Number(firstArg));
-  b = Math.floor(Number(secondArg));
-  console.log(a + b);
+function add(a, b) {
+  return a + b;
 }
+
+console.log(add(firstInt, secondInt));
