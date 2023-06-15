@@ -4,7 +4,7 @@ const firstArg = process.argv[2];
 const firstInt = Math.floor(Number(firstArg));
 
 function factorial (num) {
-  if (num.isNaN() || num === 0 || num === 1) {
+  if (isNaN(num) || num === 0 || num === 1) {
     return 1;
   } else if (!num) {
     return 1;
