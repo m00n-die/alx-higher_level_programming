@@ -8,12 +8,18 @@ from model_state import Base, State
 import sys
 
 
-engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
-                       .format(sys.argv[1], sys.argv[2],
-                               sys.argv[3]), pool_pre_ping=True)
+if __name__ == '__main__':
+    """
+    Access to the database and get the states
+    from the database.
+    """
 
-Session = sessionmaker(bind=engine)
-session = Session()
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
+                            .format(sys.argv[1], sys.argv[2],
+                                    sys.argv[3]), pool_pre_ping=True)
 
-for result in session.query(State).order_by(State.id):
-    print('{}: {}'.format(result.id, result.name))
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    for result in session.query(State).order_by(State.id):
+        print('{}: {}'.format(result.id, result.name))
