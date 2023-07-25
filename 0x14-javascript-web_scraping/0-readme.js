@@ -1,4 +1,5 @@
 #!/usr/bin/node
+// reads a file
 
 let filename = (process.argv[2]).toString();
 const fs = require('fs').promises;
