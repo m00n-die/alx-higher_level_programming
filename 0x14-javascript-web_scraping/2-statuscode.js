@@ -6,5 +6,7 @@ const firstArg = process.argv[2];
 const request = require('request');
 request.get(firstArg, function (error, response, body) {
   console.log('code:', response && response.statusCode);
-  console.error('error:', error);
+  if (error) {
+    console.error('error:', error);
+  }
 });
