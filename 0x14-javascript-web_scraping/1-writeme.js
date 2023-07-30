@@ -1,7 +1,7 @@
 #!/usr/bin/node
 // writes to a file
 
-const file_path = (process.argv[2]).toString();
+const filepath = (process.argv[2]).toString();
 const stringToWrite = process.argv[3];
 
 const fs = require('fs').promises;
@@ -14,4 +14,4 @@ async function writeToFile (filePath, content) {
   }
 }
 
-writeToFile(file_path, stringToWrite);
+writeToFile(filepath, stringToWrite);
